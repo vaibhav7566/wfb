@@ -57,7 +57,3 @@ This project allows users to create structured workflows using **Action**, **Con
 - **Vercel** (Deployment)
 - **GitHub** (Version Control)
 
----
-
-## Project Structure
-
