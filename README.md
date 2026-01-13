@@ -1,16 +1,63 @@
-# React + Vite
+# Workflow Builder (WFB)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visual **Workflow Builder** built using **React (Vite)** and **Redux Toolkit**.  
+This project allows users to create structured workflows using **Action**, **Condition (True/False)**, and **End** nodes with enforced rules and clean UI logic.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Live Demo
 
-## React Compiler
+ Deployed on **Vercel**  
+🔗[https://wfb-sigma.vercel.app/]
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Features
 
-## Expanding the ESLint configuration
+- Tree-based workflow structure
+- Action nodes with linear flow
+- Condition nodes with **True / False branching**
+- End nodes with **zero outgoing connections**
+- Rules enforced to prevent invalid workflows
+- Add & delete nodes with **auto-reconnect**
+- Recursive rendering of workflow nodes
+- Clean and minimal UI
+- State managed using **Redux Toolkit**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Workflow Rules
+
+- **Start node**
+  - Can add Action or Condition
+  - Cannot be deleted
+
+- **Action node**
+  - Can add Action
+  - Can add Condition (only if not part of a branch)
+  - Can add End
+  - Only one outgoing connection allowed
+
+- **Condition node**
+  - Can only add True and False branches
+  - Maximum two children (True / False)
+
+- **End node**
+  - Final step of a workflow
+  - No outgoing connections
+  - No actions allowed
+
+---
+
+##  Tech Stack
+
+- **React** (Vite)
+- **Redux Toolkit**
+- **JavaScript**
+- **CSS**
+- **Vercel** (Deployment)
+- **GitHub** (Version Control)
+
+---
+
+## Project Structure
+
